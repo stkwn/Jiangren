@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Counter</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.windows {
+			width: 756px;
+			height: 637px;
+			border:5px solid #818181;
+			background-color: #74fbfd;
+			margin:100px auto;
+			text-align: center;
+		}
+		h1 {
+			height: 155px;
+			color: #3a7e7f;
+			/*line-height: 155px;*/
+			font-size: 48px;
+			padding-top: 35px;
+		}
+		.plus,
+		.minus,
+		.reset {
+			display: block;
+			width: 107px;
+			height: 55px;
+			border:2px solid #000;
+			border-radius: 8px;
+			margin:0 auto;
+			font-size: 24px;
+			color: #fff;
+			font-weight: 700;
+		}
+		.plus {
+			background-color: #a6eb99;
+		}
+		.minus {
+			background-color: #ed6d52;
+			margin-bottom: 15px;
+		}
+		.reset {
+			background-color: #f3a83b;
+		}
+		.result {
+			height: 133px;
+			line-height: 133px;
+			font-size: 30px;
+			font-weight: 900;
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="windows">
+		<h1>This is a Counter</h1>
+		<button class="plus">+</button>
+		<p class="result">0 </p>
+		<button class="minus">-</button>
+		<button class="reset">Reset</button>
+	</div>
+	<script type="text/javascript">
+		var plusbtn = document.querySelector('.plus');
+		var minusbtn = document.querySelector('.minus');
+		var resetbtn = document.querySelector('.reset');
+		var result = document.querySelector('.result');
+		var num = 0;
+		console.log(plusbtn);
+		plusbtn.onclick = function () {
+			num++;
+			// console.log(num);
+			result.innerHTML = num;
+		}
+		minusbtn.onclick = function () {
+			num--
+			// console.log(num);
+			result.innerHTML = num;
+		}
+		resetbtn.onclick = function () {
+			num = 0;
+			result.innerHTML = num;			
+		}
+
+	</script>
+</body>
+</html>
